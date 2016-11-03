@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:NoDirectives" 
+		x:Class="NoDirectives.NoDirectivesPage"
+		Title="Native Test">
+
+	<AbsoluteLayout x:Name="overallAbs" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+		<StackLayout x:Name="overallStack" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+			<ListView x:Name="overallList"></ListView>
+		</StackLayout>
+	</AbsoluteLayout>
+</ContentPage>
