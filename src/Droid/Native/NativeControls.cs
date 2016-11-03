@@ -32,5 +32,9 @@ namespace NoDirectives
 																	   AbsoluteLayout.AutoSize,
 			                                                           AbsoluteLayout.AutoSize));
 		}
+
+
+		public View Fancy_GetSwitch(string titleOne, string titleTwo, Action<int> onClick) => null;
+	
 	}
 }

@@ -32,5 +32,19 @@ namespace NoDirectives
 			var overallStack = layout.FindByName<StackLayout>("overallStack");
 			overallStack.Children.Insert(0, holdingStack);
 		}
+
+		public View Fancy_GetSwitch(string titleOne, string titleTwo, Action<int> onClick)
+		{
+			var segmentedControl = new UISegmentedControl();
+			segmentedControl.Frame = new CGRect(20, 20, 280, 40);
+			segmentedControl.InsertSegment(titleOne, 0, false);
+			segmentedControl.InsertSegment(titleTwo, 1, false);
+			segmentedControl.SelectedSegment = 1;
+			segmentedControl.ValueChanged += (sender, e) => onClick(
+				(int)(sender as UISegmentedControl).SelectedSegment
+			);
+
+			return segmentedControl.ToView();
+		}
 	}
 }
